@@ -35,7 +35,8 @@ export class SearchComponent {
         this.results = this.searchField.valueChanges
             .debounceTime(400)
             .distinctUntilChanged()
-            .switchMap(term => this.musicService.searchMusics(term));
+            .switchMap(term => term ?
+                 this.musicService.searchMusics(term) : Observable.of([]));
     }
 
 }
