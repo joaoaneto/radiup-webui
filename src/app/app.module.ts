@@ -14,6 +14,11 @@ import { MusicService } from './services/music.service';
 
 const appRoutes: Routes = [
   {
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
