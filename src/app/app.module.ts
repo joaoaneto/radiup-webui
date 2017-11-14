@@ -11,6 +11,7 @@ import { VoluntarySuggestionComponent } from './voluntary-suggestion/voluntary-s
 import { SearchComponent } from './search/search.component';
 
 import { MusicService } from './services/music.service';
+import { RegisterService } from './services/register.service';
 
 const appRoutes: Routes = [
   {
@@ -48,7 +49,7 @@ const appRoutes: Routes = [
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [MusicService],
+  providers: [MusicService, RegisterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
