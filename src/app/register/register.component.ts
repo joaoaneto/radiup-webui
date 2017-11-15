@@ -14,20 +14,12 @@ import { RegisterService } from './../services/register.service'
 export class RegisterComponent {
 
     loading = false;
-
-    user: User = {
-        name: '',
-        username: '',
-        password: 'string',
-        email: '',
-        birthDate: new Date(),
-        sex: 'string'
-    }
-
     nextForm: boolean = true;
 
     userForm: FormGroup;
     
+    user: User;
+
     constructor(private fb: FormBuilder, private rs: RegisterService, private router: Router) {
         this.createForm();        
     }
@@ -35,9 +27,9 @@ export class RegisterComponent {
     get name() { return this.userForm.get('name'); }
 
     get username() { return this.userForm.get('username'); }
-
+    
     get email() { return this.userForm.get('email'); }
-
+    
     get password() { return this.userForm.get('password'); }
 
     createForm(): void {
@@ -60,6 +52,7 @@ export class RegisterComponent {
     onSubmit() {
         this.loading = true;
         this.user = this.userForm.value;
+        this.user.password = btoa(this.userForm.get('password').value);
         console.log(this.user);
         this.rs.registerUser(this.user)
             .subscribe(
@@ -67,7 +60,7 @@ export class RegisterComponent {
                     console.log("Register OK...")
                     this.router.navigate(['/login'])
                 }
-            )
+            );
     }
 
 }

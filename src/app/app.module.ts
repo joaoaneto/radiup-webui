@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 
 import { MusicService } from './services/music.service';
 import { RegisterService } from './services/register.service';
+import { AuthService } from './services/auth.service';
 
 const appRoutes: Routes = [
   {
@@ -49,7 +50,7 @@ const appRoutes: Routes = [
     HttpModule,
     ReactiveFormsModule
   ],
-  providers: [MusicService, RegisterService],
+  providers: [MusicService, RegisterService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
