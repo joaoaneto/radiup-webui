@@ -13,16 +13,29 @@
           <a class="nav-link" href="#">Dashboard</a>
         </li>
 
-        <li class="nav-item dropdown">
+        <li *ngIf="logged == 'false'" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="" alt="Usuário" class="img-thumbnail rounded-circle">                    
+            <img src="/assets/user.png" width="40px" height="40px" alt="Usuário" class="img-thumbnail rounded-circle">                      
           </a>
 
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Sair</a>
+            <a class="dropdown-item">Visitante</a>
+            <div class="dropdown-divider"></div>              
+            <a routerLink="/login" class="dropdown-item" href="#">Entrar</a>
           </div>
-
         </li>
+
+        <li *ngIf="logged == 'true'" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img src="/assets/user.png" width="40px" height="40px" alt="{{username}}" class="img-thumbnail rounded-circle">                      
+            </a>
+  
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item">{{ username }}</a>
+                <div class="dropdown-divider"></div>
+              <a routerLink="/logout" class="dropdown-item" href="#">Sair</a>
+            </div>
+          </li>
     
       </ul>
     </div>

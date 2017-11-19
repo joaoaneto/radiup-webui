@@ -8,9 +8,8 @@ import { Music } from '../music';
 import 'rxjs/add/operator/map';
 import { of } from 'rxjs/observable/of';
 
-
 const headerDict = {
-    'Authorization': 'Bearer BQCzCm8hy48e3iMVOkYfwM1N5FcczZFZgGgwYyJ4Nfpn6XOwbLdZMizbo1RUGv8YVBhLeRlI5wlwCe8ctw_FteZOiBkQ6V3AVXrtJYs5qCOeYATK9I5lL1qxXnNgegWxspF5hcoqTgF1V_bcNoB150zgfQJaDv4rk3q3m_Bf-iMtSvyi6y2c6hBneRfUOB4hdqxRxrhcPKDept5miDIFJu1YsW12GSukvjghxUT8e3Jdqdn_UB-eAdtJSBIWjmB8GPRVr40BxLOsIvwSQn05vUhs5hmgkVHbha1813fLMMhj'
+    'Authorization': 'Bearer BQDuOQ_mMbeKsjj2cYG7LMM5sRaz5degiF98TPKG_sLndKHDsE7h_LCaXtrUA7puP3pPjZT5fk38dWKDWqiNywF0ZLqHt_l-FozawY9DyvfDl5P40yytCBpDZCJARgEPOD6GUbi32ukEGqhThRUwdqg3KEMJTQwcYg040vXrgAN5Zernik20h7s5-j6xfq35TgM1PLIuyv5y3LR3FO-qgQhQDJdtxBSo15_m4qhmPJvlCFSIUXZtflh9'
 }
 
 const headerObj = {
@@ -29,7 +28,7 @@ export class MusicService {
 
         let apiUrl = `http://localhost:6868/music/${name}`
 
-        headers.append('Authorization', 'Bearer BQCmvtlGN8MpeprN4V1Z4haDc7qZk8NNjiVB_R1tyCIlCGscuZiaNaHpoKpg6qyxQ5iHg3GE7_sC11SPKcpDenZ0hbemn4CXfcMpAXIt3AkCPixUNYeYNWEQl-fv0MFH9pof7Qi3mnwM1ss4h_Nq-gaLp4adzQyFtZDxL_k6S2JKhSkrZssK5YktXe6tReMsJXMuPnxtPGU99LUUga0A08rYPYMQXx44si-afYSp4mVfpTDQFprxB6Hxh-ERqHlUC_D8tIWjTYL7FQX0O7dh7lCOyBBBDpwot8E7LrdYFAfk');
+        headers.append('Authorization', 'Bearer BQDuOQ_mMbeKsjj2cYG7LMM5sRaz5degiF98TPKG_sLndKHDsE7h_LCaXtrUA7puP3pPjZT5fk38dWKDWqiNywF0ZLqHt_l-FozawY9DyvfDl5P40yytCBpDZCJARgEPOD6GUbi32ukEGqhThRUwdqg3KEMJTQwcYg040vXrgAN5Zernik20h7s5-j6xfq35TgM1PLIuyv5y3LR3FO-qgQhQDJdtxBSo15_m4qhmPJvlCFSIUXZtflh9');
         opts.headers = headers;
 
         /*return this.http.get(apiUrl, opts)

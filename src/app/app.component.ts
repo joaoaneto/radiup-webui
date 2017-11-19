@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'RadiUP!';
+
+  logged = localStorage.getItem('logged-in');
+  username = localStorage.getItem('username');
+
 }

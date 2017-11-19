@@ -44,7 +44,7 @@ export class LoginComponent {
                 data => {
                     console.log(data)
                     //verificar status da resposta
-                    //this.router.navigate(['/login'])
+                    this.router.navigate(['/suggestion'])
                     //redirecionar caso o login esteja ok
                 }
             )
